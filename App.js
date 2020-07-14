@@ -1,5 +1,6 @@
 import * as React from "react";
 import { View, Text } from "react-native";
+import LotsOfGreetings from './Greetings'
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       }}
     >
       <Text>Universal React with Expo</Text>
+      <LotsOfGreetings />
     </View>
   );
 }
