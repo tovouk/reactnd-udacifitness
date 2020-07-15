@@ -1,11 +1,12 @@
 import * as React from "react";
 import { View, Text } from "react-native";
+import {Ionicons} from '@expo/vector-icons'
 import LotsOfGreetings from './Greetings'
 
 export default class App extends React.Component {
   componentDidMount(){
     console.log("Before")
-    debugger
+    //debugger
     console.log("After")
   }
 
@@ -18,9 +19,7 @@ export default class App extends React.Component {
           alignItems: "center",
         }}
       >
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Ionicons name='ios-pizza' color='red' size={100}/>
       </View>
     )
   }
