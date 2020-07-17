@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {View, TouchableOpacity, Text} from 'react-native'
 import {getMetricMetaInfo, timeToString} from '../utils/helpers'
+import {submitEntry,removeEntry} from '../utils/api'
 import { Ionicons } from '@expo/vector-icons'
 import UdaciSlider from './UdaciSlider'
 import UdaciSteppers from './UdaciSteppers'
@@ -72,7 +73,7 @@ export default class AddEntry extends Component{
         //Navigate to Hom
 
         //Save to 'DB'
-
+        submitEntry({key,entry})
         //Clear local notification
 
     }
@@ -85,6 +86,7 @@ export default class AddEntry extends Component{
         //Route to home
 
         //update db
+        removeEntry(key)
     }
 
     render(){
