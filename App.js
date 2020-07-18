@@ -16,6 +16,7 @@ export default class App extends React.Component {
       <Provider store={createStore(reducer)}>
         <View
           style={style.container}>
+          <View style={{height:20}} />
           <History />
         </View>
       </Provider>

@@ -25,6 +25,24 @@
   - Android: [Client Android](https://play.google.com/store/apps/details?id=host.exp.exponent&referrer=blankexample)
   - Web: Any web browser
 
+## WARNING
+
+Currently using outdated packages
+
+There is an Issue with udacifitness-calendar and so udacifitness-calendar-fix is one fix, I decided not to create an entire calendar component for this. The current fix comes from [here](https://github.com/udacity/reactnd-UdaciFitness-complete/commit/57d249307036bc97c8b539fc3b5fcc38455a3419)
+
+I removed "_component" and everything worked as expected with
+
+`
+setScrollPadPosition(y, animated) {
+    this.scrollPad.scrollTo({x: 0, y, animated});
+}
+`
+
+in:
+
+`node_modules\udacifitness-calendar-fix\src\agenda\index.js`
+
 ## Adding Native Code
 
 This project can be run from a web browser or the Expo client app. You may find that you want to add more native code later on. You can do this by ejecting the project and rebuilding it yourself.
