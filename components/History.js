@@ -33,7 +33,7 @@ class History extends Component {
 
     renderEmptyDate(formattedDate) {
         return (
-            <View>No Data for this day</View>
+            <View><Text>No Data for this day</Text></View>
         )
     }
 
