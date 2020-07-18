@@ -4,6 +4,7 @@ import AddEntry from "./components/AddEntry";
 import {createStore} from "redux"
 import {Provider} from "react-redux"
 import reducer from './reducers'
+import History from './components/History'
 
 export default class App extends React.Component {
   handlePress = () => {
@@ -15,7 +16,7 @@ export default class App extends React.Component {
       <Provider store={createStore(reducer)}>
         <View
           style={style.container}>
-          <AddEntry />
+          <History />
         </View>
       </Provider>
     )
