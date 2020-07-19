@@ -18,11 +18,6 @@ class History extends Component {
 
     componentDidMount (){
         const {dispatch} = this.props
-        const {ready} = this.state
-
-        if(ready === false) {
-            return <AppLoading />
-        }
 
         fetchCalendarResults()
         .then((entries)=> dispatch(receiveEntries(entries)))
@@ -32,10 +27,8 @@ class History extends Component {
                     [timeToString()] : getDailyReminderValue()
                 }))
             }
+            this.setState({ready:true})
         })
-        .then(()=> this.setState({
-            ready:true
-        }))
     }
 
     renderItem = ({today,...metrics},formattedDate, key) => (
@@ -55,6 +48,11 @@ class History extends Component {
     )
 
     renderEmptyDate(formattedDate) {
+        const {ready} = this.state
+        if(ready === false) {
+            return <AppLoading />
+        }
+
         return (
             <View style={styles.item}>
                 <DateHeader
