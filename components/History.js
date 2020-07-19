@@ -49,7 +49,7 @@ class History extends Component {
 
     renderEmptyDate(formattedDate) {
         const {ready} = this.state
-        if(ready === false) {
+        if(!ready) {
             return <AppLoading />
         }
 
